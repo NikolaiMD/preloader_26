@@ -1,0 +1,136 @@
+#preloader{
+  width: 200px;
+  height: 200px;
+  border: 1px solid grey;
+  margin-top: 100px;
+  margin-left: 600px;
+  overflow: hidden;
+}
+#preloader .box{
+  width: 200px;
+  height: 100px;
+  background-color: #678;
+  position: relative;
+  bottom: -100px;
+}
+#preloader .box .dark{
+  width: 300px;
+  height: 100px;
+  background-color: red;
+  border-radius: 100%;
+  /* opacity: 0.5; */
+  position: absolute;
+  left: -50px;
+  top: -13px;
+  /* z-index: 1; */
+  /* transform: scaleY(0.5); */
+  transform-origin: 50% 13px;
+  animation: bounce 1.5s cubic-bezier(0,2.0,.77,.47) infinite;
+  background-color: inherit;
+}
+@keyframes bounce{
+  0%{transform: scale(0.0);}
+  25%{transform: scale(0.0);}
+  50%{transform: scale(1.0);}
+  100%{transform: scale(0.0);}
+}
+#preloader .box .light{
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  border-radius: 100%;
+  /* opacity: 0; */
+  position: absolute;
+  left: -50px;
+  top: -87px;
+  /* z-index: 10; */
+  /* transform: scaleY(0.5); */
+  transform-origin: 50% 87px;
+  animation: bounce2 1.5s cubic-bezier(0,2.0,.77,.47) infinite;
+}
+@keyframes bounce2{
+  0%{transform: scale(0.0);}
+  50%{transform: scale(0.0);}
+  75%{transform: scale(1.0);}
+  100%{transform: scale(0.0);}
+}
+#preloader .box .square{
+  width: 45px;
+  height: 45px;
+  border: 5px solid #678;
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  margin-left: -25px;
+  animation: jumping 1.5s cubic-bezier(0,0.4,.44,.46)  infinite;
+  opacity: 1;
+}
+@keyframes jumping{
+  /* 0%{top: 30px; transform: rotate(-45deg);}
+  25%{top: -100px; transform: rotate(-90deg);}
+  50%{top: -100px; transform: rotate(-135deg);}
+  100%{top: 30px; transform: rotate(-180deg);} */
+  0%{top: 120px; transform: rotate(-45deg);}
+  50%{top: 0; transform: rotate(-225deg);}
+  100%{top: 120px; transform: rotate(-405deg);}
+}
+#preloader .box .triangle{
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid red; */
+  position: absolute;
+  left: 50%;
+  /* z-index: 8; */
+  margin-left: -25px;
+  animation: jumping2 1.5s cubic-bezier(0,0.4,.44,.46) infinite;
+}
+@keyframes jumping2{
+  0%{top: 30px; transform: rotate(-45deg);}
+  50%{top: -100px; transform: rotate(-225deg);}
+  100%{top: 30px; transform: rotate(-405deg);}
+}
+#preloader .box .triangle .figure_1{
+  width: 0;
+  height: 0;
+  /* background-color: blue; */
+  border: 25px solid white;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-width: 35px;
+  position: absolute;
+  bottom: 0;
+}
+#preloader .box .triangle .figure_1:before{
+  content: "";
+  width: 0;
+  height: 0;
+  border: 18px solid #678;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-width: 25px;
+  position: absolute;
+  bottom: -32px;
+  left: -18px;
+}
+#preloader .box .dark_2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background-color: transparent;
+  overflow: hidden;
+}
+#preloader .box .light_2{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background-color: transparent;
+  /* opacity: 0.1; */
+  /* z-index: -100; */
+  overflow: hidden;
+}
